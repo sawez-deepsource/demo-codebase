@@ -1,0 +1,30 @@
+{
+  "files": [],
+  "analyzer_meta": {
+    "name": "javascript",
+    "enabled": true,
+    "meta": {
+      "environment": ["nodejs", "browser", "jest", "mocha", "cypress", "vitest", "jasmine"],
+      "dialect": "typescript",
+      "plugins": ["react", "vue", "angular", "angularjs", "ember", "next"],
+      "globals": ["MY_APP_GLOBAL", "API_BASE_URL"]
+    }
+  },
+  "exclude_files": [],
+  "exclude_patterns": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "tests/autofix/fixed_code/**",
+    "tests/autofix/src/**",
+    "tests/autofix/createVuePluginFixtures.ts",
+    "tests/autofix/createTestFixtures.ts",
+    "tests/autofix/createEmberPluginFixtures.ts",
+    "tests/autofix/createReactPluginFixtures.ts",
+    "tests/autofix/createDeepsourcePluginFixtures.ts",
+    "tests/scatr/**/*",
+    "**/fixtures/**",
+    "src/generated/*"
+  ],
+  "test_files": [],
+  "test_patterns": ["**/*.test.ts", "**/*.test.js", "**/*.test.tsx", "**/*.spec.ts", "**/*.spec.js"]
+}

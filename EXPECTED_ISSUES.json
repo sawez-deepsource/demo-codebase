@@ -1,0 +1,48 @@
+{
+  "_comment": "Expected issues from the demo codebase. Used to validate pipeline output.",
+  "src/bad-core.js": [
+    { "issue_code": "JS-0239", "line": 5,  "rule": "no-var" },
+    { "issue_code": "JS-0050", "line": 8,  "rule": "eqeqeq" },
+    { "issue_code": "JS-0056", "line": 11, "rule": "no-console" },
+    { "issue_code": "JS-0060", "line": 14, "rule": "no-eval" },
+    { "issue_code": "JS-0005", "line": 17, "rule": "no-debugger" },
+    { "issue_code": "JS-0009", "line": 20, "rule": "no-empty (catch block)" },
+    { "issue_code": "JS-0242", "line": 23, "rule": "prefer-const" },
+    { "issue_code": "JS-0246", "line": 26, "rule": "prefer-template" },
+    { "issue_code": "JS-0241", "line": 29, "rule": "prefer-arrow-callback" },
+    { "issue_code": "JS-0091", "line": 32, "rule": "no-throw-literal" },
+    { "issue_code": "JS-0049", "line": 37, "rule": "dot-notation" },
+    { "issue_code": "JS-0104", "line": 40, "rule": "yoda" },
+    { "issue_code": "JS-0128", "line": 43, "rule": "no-unused-vars (unusedThing)" },
+    { "issue_code": "JS-0086", "line": 46, "rule": "no-return-assign" }
+  ],
+  "src/bad-typescript.ts": [
+    { "issue_code": "JS-0323", "line": 5,  "rule": "@typescript-eslint/no-explicit-any (param)" },
+    { "issue_code": "JS-0323", "line": 5,  "rule": "@typescript-eslint/no-explicit-any (return)" },
+    { "issue_code": "JS-0339", "line": 10, "rule": "@typescript-eslint/no-non-null-assertion" },
+    { "issue_code": "JS-0331", "line": 13, "rule": "@typescript-eslint/no-inferrable-types (number)" },
+    { "issue_code": "JS-0331", "line": 14, "rule": "@typescript-eslint/no-inferrable-types (string)" },
+    { "issue_code": "JS-0322", "line": 17, "rule": "@typescript-eslint/no-empty-interface" },
+    { "issue_code": "JS-0337", "line": 20, "rule": "@typescript-eslint/no-namespace" },
+    { "issue_code": "JS-0295", "line": 25, "rule": "@typescript-eslint/ban-ts-comment (@ts-ignore)" },
+    { "issue_code": "JS-0360", "line": 29, "rule": "@typescript-eslint/prefer-as-const" },
+    { "issue_code": "JS-0356", "line": 32, "rule": "@typescript-eslint/no-unused-vars (unusedTyped)" },
+    { "issue_code": "JS-0246", "line": 35, "rule": "prefer-template" },
+    { "issue_code": "JS-0242", "line": 38, "rule": "prefer-const" }
+  ],
+  "src/App.tsx": [
+    { "issue_code": "JS-0414", "line": 16, "rule": "react/jsx-key (missing key in map)" },
+    { "issue_code": "JS-0437", "line": 20, "rule": "react/no-array-index-key" },
+    { "issue_code": "JS-0422", "line": 28, "rule": "react/jsx-no-target-blank" },
+    { "issue_code": "JS-0468", "line": 33, "rule": "react/self-closing-comp" }
+  ],
+  "src/server.ts": [
+    { "issue_code": "JS-0262", "line": 6,  "rule": "node/no-path-concat" },
+    { "issue_code": "JS-0263", "line": 10, "rule": "node/no-process-exit" },
+    { "issue_code": "JS-0056", "line": 14, "rule": "no-console" }
+  ],
+  "src/clean-utils.ts": [],
+  "tests/utils.test.ts": {
+    "_comment": "Test file — should get relaxed rules. Ideally 0 issues from our rules."
+  }
+}

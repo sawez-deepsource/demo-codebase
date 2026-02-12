@@ -1,0 +1,13 @@
+{
+  "name": "@demo/legacy",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "ember-cli": "^5.0.0",
+    "meteor": "^2.0.0",
+    "@angular/core": "^17.0.0"
+  },
+  "devDependencies": {
+    "jasmine": "^5.0.0"
+  }
+}
