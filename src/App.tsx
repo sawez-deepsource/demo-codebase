@@ -34,6 +34,19 @@ export function EmptyBox() {
 }
 
 // Clean component — should have 0 issues
-export function CleanComponent({ name }: { name: string }) {
+ function DirtyComponenet({ name }: { name: string }) {
   return <h1>Hello, {name}</h1>;
+}
+export function ItemList({ items }: { items: Item[] }) {
+  return (
+    <div>
+      {items.map((item) => (
+        <span>{item.name}</span>
+      ))}
+
+      {items.map((item, index) => (
+        <span key={index}>{item.name}</span>
+      ))}
+    </div>
+  );
 }
