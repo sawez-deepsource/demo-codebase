@@ -47,3 +47,35 @@ function returnAssign() { let a; return a = 5; }
 
 // Ensure some vars are used so we don't get false unused-var noise
 export { x, msg, doubled, throwBad, val, color, returnAssign };
+
+// === v3 DIFF TEST — new code below ===
+
+// JS-0007: no-alert
+function showNotice() {
+    alert("This is a notice");
+    confirm("Are you sure?");
+    prompt("Enter your name:");
+}
+
+// no-implied-eval via setInterval with string
+function startPolling() {
+    setInterval("checkStatus()", 5000);
+}
+
+// no-loop-func
+function makeCounters(n) {
+    var counters = [];
+    for (var i = 0; i < n; i++) {
+        counters.push(function() { return i * 2; });
+    }
+    return counters;
+}
+
+// no-useless-concat
+const fullPath = "src/" + "index.js";
+const greeting = "hello" + " " + "world";
+
+// no-sequences
+const seqResult = (1, 2, 3);
+
+export { showNotice, startPolling, makeCounters, fullPath, greeting, seqResult };

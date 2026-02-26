@@ -46,4 +46,32 @@ export function Footer() {
   );
 }
 
+// === v3 DIFF TEST — new code below ===
+
+// react/no-danger — dangerouslySetInnerHTML
+export function UnsafeContent({ html }: { html: string }) {
+  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+}
+
+// react/jsx-key — missing key in fragment map
+export function TagList({ tags }: { tags: string[] }) {
+  return (
+    <div>
+      {tags.map((tag) => (
+        <span className="tag">{tag}</span>
+      ))}
+    </div>
+  );
+}
+
+// no-alert + react component
+export function ConfirmDelete({ onDelete }: { onDelete: () => void }) {
+  const handleClick = () => {
+    if (confirm("Are you sure you want to delete?")) {
+      onDelete();
+    }
+  };
+  return <button onClick={handleClick}>Delete</button>;
+}
+
 export default Dashboard;
